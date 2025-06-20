@@ -5,7 +5,7 @@
 
 
 ### Section 4: Numeric types  
-* Built-in round() implements bankers rounding, not the classical half-up rounding
+* Built-in round() implements banker's rounding, not the classical half-up rounding
 * Floats are not reliable, since some rational numbers in base 10 might not be rational in base 2, thus, is truncated to be stored.
 * Decimals are more precise than floats, but lot heavier to store/process.
 * Theres `divmod(quotient, divisor) -> dividend, remainder` function, replacing `a, b = n // m,  n % m`
@@ -42,3 +42,14 @@
   * `itemgetter()` and `attrgetter()` 
 
 
+### Section 7: Scopes, Closures & Decorators
+* If Python can not find variable in current **scope**, it will look for it in an enclosing scope's namespace, going one step up in hierarchy.
+* At compile time, python pre-determines that specific variables (for example function local variables), will be part of local namespaces, but namespaces and scopes are created at runtime, sometimes leads to confusing errors. For example when you're using outer variable of name `a`, but have it later defined in local scope.
+* `global` keyword  
+* In Python, code blocks do **not** have separate scopes/namespaces. So for example variables created within `if` statement, exist in scope that said `if` belongs to.
+* **Closures** are basically functions, which carry reference to **heap-allocated cells**, allowing those variables to persist across calls or closures.
+* **Cells** in python are intermediary objects (middlemen). When returning a closure from a function, the *free variable*, the variable that is defined in outer scope being used in the inner scope (thus creating the closure), are pointing to same cell in memory, which is pointing to value in memory address.
+* **Cells** are created if these 2 conditions are met:
+  * A variable is assigned in a non-global scope
+  * That same variable is referenced in a nested function
+* 
