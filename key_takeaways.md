@@ -52,4 +52,4 @@
 * **Cells** are created if these 2 conditions are met:
   * A variable is assigned in a non-global scope
   * That same variable is referenced in a nested function
-* 
+* **Decorators** are higher-order functions that take another function as input, and return a new function (often a closure) that wraps the original function, adding extra behavior before or after its execution.
