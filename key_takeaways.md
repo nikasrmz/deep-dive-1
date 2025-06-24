@@ -53,3 +53,5 @@
   * A variable is assigned in a non-global scope
   * That same variable is referenced in a nested function
 * **Decorators** are higher-order functions that take another function as input, and return a new function (often a closure) that wraps the original function, adding extra behavior before or after its execution.
+* `from functools import wraps` - is used in custom decorators to decorate the inner function, ensuring that the original function's metadata (like its name and docstring) is preserved.
+* **Memoization** - a technique used to cache the results of expensive function calls and return the cached result when the same inputs occur again, thereby reducing computation time on subsequent calls.  
