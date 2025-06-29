@@ -55,3 +55,7 @@
 * **Decorators** are higher-order functions that take another function as input, and return a new function (often a closure) that wraps the original function, adding extra behavior before or after its execution.
 * `from functools import wraps` - is used in custom decorators to decorate the inner function, ensuring that the original function's metadata (like its name and docstring) is preserved.
 * **Memoization** - a technique used to cache the results of expensive function calls and return the cached result when the same inputs occur again, thereby reducing computation time on subsequent calls.  
+* **Decorator factories** are either functions or callable classes used to implement parameterized decorators.
+  * In the function-based approach, the outer function takes the decorator parameters and returns the actual decorator, which in turn returns the wrapper function.
+  * n the class-based approach, the class takes the parameters in `__init__`, and implements `__call__` to behave like the decorator — returning the wrapper when applied to a function.
+* **Monkey-patching** - dynamic modification or extension of classes or modules at runtime — for example, adding, overriding, or altering functions or attributes. It is often used to change the behavior of third-party libraries without modifying their source code. While monkey-patching can be done using decorators, it's not limited to them.
