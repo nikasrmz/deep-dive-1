@@ -59,3 +59,4 @@
   * In the function-based approach, the outer function takes the decorator parameters and returns the actual decorator, which in turn returns the wrapper function.
   * n the class-based approach, the class takes the parameters in `__init__`, and implements `__call__` to behave like the decorator — returning the wrapper when applied to a function.
 * **Monkey-patching** - dynamic modification or extension of classes or modules at runtime — for example, adding, overriding, or altering functions or attributes. It is often used to change the behavior of third-party libraries without modifying their source code. While monkey-patching can be done using decorators, it's not limited to them.
+* **Decorator dispatching** refers to dynamically selecting which implementation to use based on the type or value of the argument(s) at runtime, often using a dispatch table or the functools.singledispatch mechanism.
