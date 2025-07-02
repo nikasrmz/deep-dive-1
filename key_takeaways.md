@@ -64,3 +64,9 @@
 
 ### Section 8: Tuples as Data Structures and Named Tuples
 * Using `_` as a placeholder when unpacking is just a convention. For python, it's just another variable. For example: `*_, c = (1, 2, 3)` => `_ = [1, 2]`, `c = 3`
+* `from collections import namedtuple` is a class factory function in Python that returns a new class type, which is a subclass of `tuple`. This class allows you to create tuple-like objects where fields can be accessed using named attributes, making the code more readable and self-documenting.
+    ```
+    Point2D = namedtuple('Point2D', ['x', 'y'])
+    point = Point2D(x=1, y=2)
+    ```
+* `_replace` - a method on namedtuple instances that returns a **new instance** with specified fields replaced by new values. Since namedtuples **are immutable**, `_replace()` provides a safe way to create modified copies.
