@@ -70,3 +70,8 @@
     point = Point2D(x=1, y=2)
     ```
 * `_replace` - a method on namedtuple instances that returns a **new instance** with specified fields replaced by new values. Since namedtuples **are immutable**, `_replace()` provides a safe way to create modified copies.
+* `namedtuple` is a more memory-efficient and faster alternative to `dataclass` when you only need immutable, lightweight data containers.
+
+
+### Section 9: Modules, Packages and Namespaces
+* **Imported modules are objects** (specifically instances of the built-in type module), and when you import a module, you're **binding a variable to that module object**.
