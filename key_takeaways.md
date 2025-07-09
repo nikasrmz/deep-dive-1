@@ -75,3 +75,18 @@
 
 ### Section 9: Modules, Packages and Namespaces
 * **Imported modules are objects** (specifically instances of the built-in type module), and when you import a module, you're **binding a variable to that module object**.
+* When importing **modules**, python follows these steps:
+  1. **Check** `sys.modules`:  
+Python first looks inside the `sys.modules` dictionary to see if the module has already been loaded during the current session. If it’s found there, Python reuses that module object and skips loading it again.
+  2. **Search** `sys.path`:  
+If the module is not in `sys.modules`, Python then iterates through the directories listed in sys.path. These paths include:
+      * The directory of the script being run
+      * Environment-specific paths (e.g., site-packages)
+      * Standard library paths
+  3. **Load and Compile**:  
+Once the module file is found (e.g. `.py`, `.pyc`, or compiled shared library), Python:
+      * Loads it
+      * Compiles it to bytecode if necessary
+      * Executes the module’s top-level code
+  4. **Create Reference**:  
+Finally, Python binds a variable with the module name in the importing namespace, pointing to the loaded module object.

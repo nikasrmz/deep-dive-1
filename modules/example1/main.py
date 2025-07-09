@@ -1,12 +1,11 @@
-print(f'----------- running {__name__} ----------- ')
+print(f'----------- running main.py - {__name__} ----------- ')
 
-def pprint_dict(header, d):
-    print('\n-----------------------------------------')
-    print(f'****** {header} ******')
-    for key, value in d.items():
-        print(key, '=', value)
-    print('-----------------------------------------\n') 
+import module1
 
+print(module1)
+module1.pprint_dict('main.globals', globals())
 
-pprint_dict('module1.globals', globals())
+import module1
+
+# pprint_dict('module1.globals', globals())
     
