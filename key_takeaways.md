@@ -90,3 +90,6 @@ Once the module file is found (e.g. `.py`, `.pyc`, or compiled shared library), 
       * Executes the module’s top-level code
   4. **Create Reference**:  
 Finally, Python binds a variable with the module name in the importing namespace, pointing to the loaded module object.
+* **Packages** are also modules, what makes it package, is the fact that it is a directory instead of a file, has `__init__.py` and has `__path__` attribute.
+* `import pack1.pack1_1` loads both `pack1` and `pack1_1`, so `sys.modules` contains both, but only puts `pack1` in `globals()`
+* 
