@@ -92,4 +92,16 @@ Once the module file is found (e.g. `.py`, `.pyc`, or compiled shared library), 
 Finally, Python binds a variable with the module name in the importing namespace, pointing to the loaded module object.
 * **Packages** are also modules, what makes it package, is the fact that it is a directory instead of a file, has `__init__.py` and has `__path__` attribute.
 * `import pack1.pack1_1` loads both `pack1` and `pack1_1`, so `sys.modules` contains both, but only puts `pack1` in `globals()`
-* 
+
+
+### Section 11: Extras
+* Useful Peps:
+  * PEP 8 - Style guide and idiomatic python
+  * PEP 20 - Zen of Python
+  * PEP 484 - Type hints
+* Useful books:
+  * Learning Python - Mark Lutz 
+  * Fluent Python - Luciano Ramalho
+  * Python Cookbook - David Beazley & Brian K. Jones
+  * Effective Python: 59 Specific Ways to Write Better Python - Brett Slatkin
+  * Python in a Nutshell - Alex Martelli, Anna Ravenscroft & Steve Holden
